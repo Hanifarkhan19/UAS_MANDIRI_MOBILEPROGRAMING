@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "7d07cf20-9895-45aa-9f9b-d6abb418604a",
+		"name": "hanip",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}data.php",
+					"host": [
+						"{{base_url}}data",
+						"php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nama",
+							"value": "sman 1 balapulang",
+							"type": "default"
+						},
+						{
+							"key": "alamat",
+							"value": "jl. raya banjaranyar, balapulang",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}create.php",
+					"host": [
+						"{{base_url}}create",
+						"php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "nama",
+							"value": "",
+							"type": "default"
+						},
+						{
+							"key": "alamat",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}update.php",
+					"host": [
+						"{{base_url}}update",
+						"php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}delete.php?id=1",
+					"host": [
+						"{{base_url}}delete",
+						"php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080/hanip/",
+			"type": "string"
+		}
+	]
+}
